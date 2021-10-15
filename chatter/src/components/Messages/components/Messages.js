@@ -54,7 +54,7 @@ function Messages(props) {
 	};
 
 	const onChangeMessage = (e) => {
-		setMessage(...message, e.target.value);
+		setMessage([ ...message, e.target.value ]);
 	};
 	const receiveMessage = () => {
 		playReceive();
