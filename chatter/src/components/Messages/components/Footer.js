@@ -7,15 +7,15 @@ export default function Footer({ sendMessage, onChangeMessage, message }) {
 		if (keyCode !== RETURN_KEY_CODE) {
 			return;
 		}
-		// sendMessage = (e, props) => {
-		// 	e.preventDefault();
-		// 	props.socket.emit('message', message);
-		// 	message = '';
-		// 	props.playSend();
-		// };
-		// onChangeMessage = (e) => {
-		// 	message(e.target.value);
-		// };
+		sendMessage = (e, props) => {
+			e.preventDefault();
+			props.socket.emit('message', message);
+			message = '';
+			props.playSend();
+		};
+		onChangeMessage = (e) => {
+			message(e.target.value);
+		};
 	};
 
 	return (
